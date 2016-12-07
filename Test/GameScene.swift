@@ -14,27 +14,19 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-//        addEnemy(radius:50,angle: CGFloat(M_PI))
-//        addEnemy(radius: 50, angle: CGFloat(0))
-        //addBackground()
-        let frame=Stage()
-        frame.config(position: CGPoint(x: 200, y: 200), parent: self)
+
+        let frame=Stage2(size: CGSize(width: self.frame.width, height: self.frame.height/2))
+        frame.config(position: CGPoint(x: 0, y: self.frame.height), parent: self)
         
     }
-//    func addEnemy(radius: CGFloat,angle: CGFloat){
-//        let enemy=EnemyController(texture: Textures.ENEMY)
-//        enemy.config(position: midPoint, parent: self,radius:radius,angle:angle)
-//        enemy.addFrameNode()
-//    }
-//    
-//    
-//    func addBackground(){
-//        let background = SKSpriteNode(imageNamed: "background")
-//        background.anchorPoint = CGPoint(x: 0, y: 0)
-//        background.position = CGPoint(x: 0, y: 0)
-//        background.zPosition = -1
-//        self.addChild(background)
-//        
-//    }
+   
+    func addBackground(){
+        let background = SKSpriteNode(imageNamed: "background")
+        background.anchorPoint = CGPoint(x: 0, y: 0)
+        background.position = CGPoint(x: 0, y: 0)
+        background.zPosition = -1
+        self.addChild(background)
+        
+    }
   
 }

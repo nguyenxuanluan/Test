@@ -21,6 +21,8 @@
 		F18CDFCD1DF0885C00D24807 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18CDFCC1DF0885C00D24807 /* Controller.swift */; };
 		F18CDFCF1DF088AE00D24807 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18CDFCE1DF088AE00D24807 /* EnemyController.swift */; };
 		F18CDFD21DF0894600D24807 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18CDFD11DF0894600D24807 /* Constants.swift */; };
+		F1B79ECE1DF8376C0065DFE7 /* Stage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B79ECD1DF8376C0065DFE7 /* Stage1.swift */; };
+		F1B79ED01DF83B840065DFE7 /* Stage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B79ECF1DF83B840065DFE7 /* Stage2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F18CDFCC1DF0885C00D24807 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		F18CDFCE1DF088AE00D24807 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
 		F18CDFD11DF0894600D24807 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F1B79ECD1DF8376C0065DFE7 /* Stage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage1.swift; sourceTree = "<group>"; };
+		F1B79ECF1DF83B840065DFE7 /* Stage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F1325F621DF7FFB000184171 /* Frame.swift */,
+				F1B79ECD1DF8376C0065DFE7 /* Stage1.swift */,
+				F1B79ECF1DF83B840065DFE7 /* Stage2.swift */,
 			);
 			name = Stage;
 			sourceTree = "<group>";
@@ -201,10 +207,12 @@
 				F18CDFB71DF0877E00D24807 /* GameViewController.swift in Sources */,
 				F18CDFAF1DF0877E00D24807 /* AppDelegate.swift in Sources */,
 				F18CDFCF1DF088AE00D24807 /* EnemyController.swift in Sources */,
+				F1B79ED01DF83B840065DFE7 /* Stage2.swift in Sources */,
 				F18CDFCD1DF0885C00D24807 /* Controller.swift in Sources */,
 				F18CDFCA1DF0880A00D24807 /* Views.swift in Sources */,
 				F18CDFC71DF0879B00D24807 /* Utils.swift in Sources */,
 				F1325F631DF7FFB000184171 /* Frame.swift in Sources */,
+				F1B79ECE1DF8376C0065DFE7 /* Stage1.swift in Sources */,
 				F18CDFD21DF0894600D24807 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
