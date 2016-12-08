@@ -9,9 +9,10 @@
 import SpriteKit
 class EnemyController:Controller {
     let SPEED:CGFloat=100
-    static let instance = EnemyController(texture: Textures.CIRCLE)
-    init(texture: SKTexture) {
-        super.init(view: View(texture: texture,size:CGSize(width: 40, height: 40)))
+    init(texture: SKTexture,resize: CGFloat) {
+        let newWidth = texture.size().width/resize
+        let newHeight = texture.size().height/resize
+        super.init(view: View(texture: texture,size:CGSize(width: newWidth, height: newHeight)))
         view.physicsBody=SKPhysicsBody(texture: texture, size: texture.size())
         view.physicsBody?.categoryBitMask=ENEMY_MASK
         view.physicsBody?.contactTestBitMask=PLAYER_MASK

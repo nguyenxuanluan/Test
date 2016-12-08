@@ -70,7 +70,7 @@ extension View {
         let reset = SKAction.run {
             self.position = position
         }
-        let action=SKAction.sequence([followPath,reversePath])
+        let action=SKAction.sequence([followPath,reversePath,reset])
         self.run(SKAction.repeatForever(action))
     }
     
