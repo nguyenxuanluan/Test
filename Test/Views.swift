@@ -7,6 +7,9 @@
 //
 
 import SpriteKit
-class View:SKSpriteNode{
-    
+
+typealias HandleContactType = (View) -> ()
+
+class View: SKSpriteNode {
+    var hanleContact: HandleContactType?
 }
