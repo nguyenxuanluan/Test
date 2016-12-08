@@ -9,23 +9,17 @@
 import SpriteKit
 class EnemyController:Controller {
     let SPEED:CGFloat=100
-    static let instance=EnemyController(texture: Textures.CIRCLE)
+    static let instance = EnemyController(texture: Textures.CIRCLE)
     init(texture: SKTexture) {
         super.init(view: View(texture: texture,size:CGSize(width: 40, height: 40)))
-        view.zPosition=3
-//        view.anchorPoint=CGPoint(x: 0.5, y: 0.5)
-//        view.physicsBody=SKPhysicsBody(texture: texture, size: texture.size())
-//        view.physicsBody?.categoryBitMask=ENEMY_MASK
-//        view.physicsBody?.contactTestBitMask=PLAYER_MASK
-//        view.physicsBody?.collisionBitMask=0
-//        view.hanleContact = {
-//            otherView in
-//            otherView.removeFromParent()
-//        }
-        
-        
-    }
-
-  
-
+        view.physicsBody=SKPhysicsBody(texture: texture, size: texture.size())
+        view.physicsBody?.categoryBitMask=ENEMY_MASK
+        view.physicsBody?.contactTestBitMask=PLAYER_MASK
+        view.physicsBody?.collisionBitMask=0
+        view.hanleContact = {
+            otherView in
+            otherView.removeFromParent()
+            print("contact")
+        }
+}
 }

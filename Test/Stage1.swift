@@ -12,6 +12,7 @@ class Stage1:Frame {
     override func configAction() {
         addEnemy(radius: 50, angle: 0)
         addEnemy(radius: 50, angle: CGFloat(M_PI))
+        
     }
     func addEnemy(radius: CGFloat,angle: CGFloat){
         let enemy=EnemyController(texture: Textures.CIRCLE)
