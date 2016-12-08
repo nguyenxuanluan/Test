@@ -17,7 +17,9 @@ class GameScene: SKScene {
 
         let frame=Stage2(size: CGSize(width: self.frame.width, height: self.frame.height/2))
         frame.config(position: CGPoint(x: 0, y: self.frame.height), parent: self)
-        
+//        let frame=Stage1(size: CGSize(width: self.frame.width, height: self.frame.height/2))
+//        frame.config(position: CGPoint(x:self.frame.width/2 , y: self.frame.height), parent: self)
+//
     }
    
     func addBackground(){

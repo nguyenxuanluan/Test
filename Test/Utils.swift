@@ -43,28 +43,33 @@ extension SKAction {
 }
 extension View {
     func moveRec(origin:CGPoint,size: CGSize){
-        let recPath=UIBezierPath(rect: ( CGRect(origin: origin, size: size)))
-        let move=SKAction.follow(recPath.cgPath, speed: 200)
+        let path=UIBezierPath(rect: CGRect(origin: origin, size: size))
+        //let path=CGMutablePath()
+        //path.addRect(( CGRect(origin: origin, size: size)))
+//        let move=SKAction.follow(path.cgPath, speed: 200)
+        let move = SKAction.follow(path.cgPath, asOffset: true, orientToPath: false, speed: 200)
         let reset=SKAction.run{self.position=CGPoint(x: 0, y: 0)}
         let sequence=SKAction.sequence([move,reset])
         self.run(SKAction.repeatForever(sequence))
     }
     func moveCircle(radius:CGFloat,angle: CGFloat){
          let circlePath=UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: radius, startAngle: angle, endAngle: angle-0.01, clockwise: true)
-        let move=SKAction.follow(circlePath.cgPath, speed: 200)
+        let move =  SKAction.follow(circlePath.cgPath, asOffset: true, orientToPath: false, speed: 200)
+       // let move=SKAction.follow(circlePath.cgPath, speed: 200)
         let reset=SKAction.run{self.position=CGPoint(x: 0, y: 0)}
         let sequence=SKAction.sequence([move,reset])
         self.run(SKAction.repeatForever(sequence))
         
     }
-    func moveToAndReverse(startPoint:CGPoint,endPoint:CGPoint){
-        //.zRotation=CGFloat(M_PI/2)
-        
+    func moveToAndReverse(position: CGPoint,startPoint:CGPoint,endPoint:CGPoint){
         let path=CGMutablePath()
         path.move(to: startPoint)
         path.addLine(to: endPoint)
-        let followPath=SKAction.follow(path, speed: 100)
+        let followPath=SKAction.follow(path, asOffset: true, orientToPath: false, speed: 100)
         let reversePath=followPath.reversed()
+        let reset = SKAction.run {
+            self.position = position
+        }
         let action=SKAction.sequence([followPath,reversePath])
         self.run(SKAction.repeatForever(action))
     }

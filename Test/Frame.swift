@@ -9,13 +9,13 @@
 import Foundation
 import SpriteKit
 class Frame :Controller {
-    let SPEED:CGFloat = 50
+    let SPEED:CGFloat = 20
     init(size: CGSize) {
-        super.init(view: View(color: UIColor.green, size: size))
+        super.init(view: View(color: UIColor.clear, size: size))
     }
     override func config(position: CGPoint, parent: SKNode) {
         super.config(position: position, parent: parent)
-        view.anchorPoint=CGPoint(x: 0, y: 1)
+        //view.anchorPoint=CGPoint(x: 0, y: 1)
         configMove()
         configAction()
     }
