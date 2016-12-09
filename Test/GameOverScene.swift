@@ -11,13 +11,15 @@ class GameOverScene : SKScene {
     var playAgainLabel: SKLabelNode!
     override func didMove(to view: SKView) {
         addBackground()
-        addGameOverLabel()
+        //addGameOverLabel()
         addPlayAgainLabel()
         addScoreLabel()
+        addHighestScoreLabel()
     }
     
     func addBackground(){
         let background = SKSpriteNode(texture: Textures.BG)
+        background.size = self.frame.size
         background.zPosition = -1
         background.anchorPoint = CGPoint(x: 0, y: 0)
         background.position = CGPoint(x: 0, y: 0)
@@ -35,7 +37,7 @@ class GameOverScene : SKScene {
         playAgainLabel = SKLabelNode(text: "Play Again")
         playAgainLabel.position = CGPoint(x: self.frame.width/2, y: self.frame.height/4)
         playAgainLabel.fontName = "AmericanTypewriter-Bold"
-        playAgainLabel.color = UIColor.black
+        playAgainLabel.color = UIColor.white
         playAgainLabel.fontSize = 30
         self.addChild(playAgainLabel)
     }
@@ -43,9 +45,19 @@ class GameOverScene : SKScene {
         let yourScore = UserDefaults.standard.integer(forKey: "Score")
     
         let scoreLabel = SKLabelNode(text: "Your score: \(yourScore)")
-        scoreLabel.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
+        scoreLabel.position = CGPoint(x: self.frame.width/2, y: self.frame.height/4*3)
         scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.color = UIColor.black
+        scoreLabel.fontColor = UIColor.red
+        scoreLabel.fontSize = 30
+        self.addChild(scoreLabel)
+    }
+    func addHighestScoreLabel(){
+        let HighestScore = UserDefaults.standard.integer(forKey: "highestScore")
+        
+        let scoreLabel = SKLabelNode(text: "Highest Score: \(HighestScore)")
+        scoreLabel.position = CGPoint(x: self.frame.width/2, y: self.frame.height/10*9)
+        scoreLabel.fontName = "AmericanTypewriter-Bold"
+        scoreLabel.fontColor = UIColor.yellow
         scoreLabel.fontSize = 30
         self.addChild(scoreLabel)
     }

@@ -13,14 +13,14 @@ class Frame :Controller {
     init(size: CGSize) {
         super.init(view: View(color: UIColor.clear, size: size))
     }
-    override func config(position: CGPoint, parent: SKNode) {
+    func config(position: CGPoint, parent: SKNode, speed: CGFloat) {
         super.config(position: position, parent: parent)
         //view.anchorPoint=CGPoint(x: 0, y: 1)
-        configMove()
+        configMove(speed: speed)
         configAction()
     }
-    func configMove(){
-        let moveAction = SKAction.sequence([.moveToBottom(position: view.position, speed: SPEED),.removeFromParent()])
+    func configMove(speed: CGFloat){
+        let moveAction = SKAction.sequence([.moveToBottom(position: view.position, speed: speed),.removeFromParent()])
         view.run(moveAction)
     }
     func configAction(){

@@ -27,10 +27,11 @@ class GameMenu : SKScene {
     }
     func addLabel(){
         label = SKLabelNode(text: START_GAME_LABEL)
-        label.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
+        label.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/5*2)
         label.fontName = FontName.AMERICA
         label.fontSize = 40
-        label.fontColor = UIColor.black
+        //label.fontColor = UIColor.init(hexString: "#07042e")
+        label.fontColor = UIColor.green
         self.addChild(label)
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

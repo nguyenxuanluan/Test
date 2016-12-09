@@ -14,13 +14,22 @@ let PLAYER_MASK=UInt32(1<<1)
 struct Textures{
     
   static let  CIRCLE = SKTexture(imageNamed: "circle1")
-    static let BG = SKTexture(imageNamed: "background")
-    static let SQUARE = SKTexture(imageNamed: "enemy1")
+    static let BG = SKTexture(imageNamed: "gameover")
+    static let SQUARE = SKTexture(imageNamed: "square")
     static let STICK = SKTexture(imageNamed: "thanhngang2")
     static let GAME_MENU_BG = SKTexture(imageNamed: "gamemenu")
 }
 struct FontName {
     static let AMERICA = "AmericanTypewriter-Bold"
+}
+struct Speed {
+    static let SM_SPEED : CGFloat = 100
+    static let NO_SPEED : CGFloat = 200
+
+    static let LAR_SPEED : CGFloat = 300
+    
+    static let VLAR_SPEED : CGFloat = 400
+
 }
 //let PLAYER_TEXTURE=SKTexture(imageNamed: "6")
 let midPoint=CGPoint(x: 160, y: 300)

@@ -29,9 +29,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    func round1(){
-        let frame = Stage1(size: CGSize(width: self.frame.width, height: self.frame.height/2))
-        frame.config(position: CGPoint(x: 0, y: self.frame.height), parent: self)
+    func addStage(){
+        let frameNode = FrameController(parent: self)
+        frameNode.runRandomStage()
     }
     
     func addScore(){
@@ -81,7 +81,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             startGameScene = true
             let location = touch.location(in: self)
             addPlayer(location: location)
-            round1()
+            addStage()
             }
     }
     
@@ -101,6 +101,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
      var lastTimeUpdate: TimeInterval = -1
+   
     override func update(_ currentTime: TimeInterval) {
         if startGameScene == true{
         if lastTimeUpdate == -1 {
@@ -118,6 +119,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let view = self.view as SKView? {
             let defaults = UserDefaults.standard
             defaults.set(score, forKey: "Score")
+             var highestScore = UserDefaults.standard.integer(forKey: "highestScore")
+            print(highestScore)
+            print(score)
+            if highestScore < score {
+                highestScore = score
+            }
+            defaults.set(highestScore, forKey: "highestScore")
+            
             let scene = GameOverScene(size: view.frame.size)
             view.presentScene(scene)
         }

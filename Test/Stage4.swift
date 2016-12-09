@@ -17,11 +17,6 @@ class Stage4 : Frame {
     func addEnemy(radius: CGFloat,angle: CGFloat){
         let enemy=EnemyController(texture: Textures.CIRCLE, resize: 4)
         enemy.config(position: CGPoint(x: 0, y: 0), parent: self.view)
-            enemy.view.moveHalfCircle(radius: radius, startAngle: angle)
-        
-        
-        
-        
-        
+            enemy.view.moveHalfCircle(radius: radius, startAngle: angle)  
     }
 }

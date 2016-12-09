@@ -21,8 +21,6 @@ class Stage2: Frame {
         addEnemy2(position:midPoint1.add(x: 10, y: 0),startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 100, y: 0))
         addEnemy2(position:midPoint2.add(x: -10, y: 0),startPoint: CGPoint(x: 00, y: 0), endPoint: CGPoint(x: -100, y: 0))
         addEnemy2(position:midPoint2.add(x: 10, y: 0),startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 100, y: 0))
-        //addEnemy2(position:midPoint.add(x: 0, y: -50),startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: -50, y: -50))
-//        addEnemy2(position:midPoint,startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 0, y: -50))
     }
     func addEnemy() {
         let enemy=EnemyController(texture: Textures.SQUARE, resize: 5)
