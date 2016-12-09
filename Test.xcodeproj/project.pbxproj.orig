@@ -251,8 +251,11 @@
 				F18CDFAF1DF0877E00D24807 /* AppDelegate.swift in Sources */,
 				F18CDFCF1DF088AE00D24807 /* EnemyController.swift in Sources */,
 				F1B79ED01DF83B840065DFE7 /* Stage2.swift in Sources */,
+<<<<<<< HEAD
 				F1C3A64C1DFB27CB00ABEA50 /* FrameController.swift in Sources */,
+=======
 				845AEFC51DFB2D2E00A1BFBA /* MainFrame.swift in Sources */,
+>>>>>>> ab3bab3250c411913607a61baababc4a05f37cb0
 				F18CDFCD1DF0885C00D24807 /* Controller.swift in Sources */,
 				F1C3A64A1DFB19C200ABEA50 /* GameMenu.swift in Sources */,
 				F1B974871DF9A4DF00C1E9BC /* Stage3.swift in Sources */,
