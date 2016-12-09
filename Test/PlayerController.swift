@@ -19,16 +19,21 @@ class PlayerController : Controller {
     }
     
     override func config(position: CGPoint, parent: SKNode) {
-      
+        
         if !gameEnd {
             super.config(position: position, parent: parent)
             configParticle()
             configPhysics()
+            //configConstrains()
         }
         
         
     }
-    
+    func configConstrains(){
+        let xRange=SKRange(lowerLimit: 0, upperLimit: parent.frame.size.width)
+        let yRange=SKRange(lowerLimit: 0, upperLimit: parent.frame.size.height)
+        self.view.constraints=[SKConstraint.positionX(xRange),SKConstraint.positionY(yRange)]
+    }
     func configPhysics(){
         let texture=SKTexture(imageNamed: "point")
         view.physicsBody=SKPhysicsBody(texture: texture, size: texture.size())

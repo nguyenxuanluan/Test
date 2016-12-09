@@ -13,7 +13,7 @@ class EnemyController:Controller {
         let newWidth = texture.size().width/resize
         let newHeight = texture.size().height/resize
         super.init(view: View(texture: texture,size:CGSize(width: newWidth, height: newHeight)))
-        view.physicsBody=SKPhysicsBody(texture: texture, size: texture.size())
+        view.physicsBody=SKPhysicsBody(texture: texture, size: CGSize(width: newWidth, height: newHeight))
         view.physicsBody?.categoryBitMask=ENEMY_MASK
         view.physicsBody?.contactTestBitMask=PLAYER_MASK
         view.physicsBody?.collisionBitMask=0

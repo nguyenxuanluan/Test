@@ -8,28 +8,46 @@
 
 import SpriteKit
 import GameplayKit
+import  Foundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var positionPlayer : CGPoint!
     let playerController = PlayerController()
-    
+    var scoreLabel:SKLabelNode!
+     var score = 0 {
+        didSet {
+            scoreLabel.text = "\(score)"
+        }
+    }
     
     override func didMove(to view: SKView) {
 
         let frame=Stage1(size: CGSize(width: self.frame.width, height: self.frame.height/2))
         frame.config(position: CGPoint(x: self.frame.size.width/2, y: self.frame.height), parent: self)
+//        let frame=Stage2(size: CGSize(width: self.frame.width, height: self.frame.height/2))
+//        frame.config(position: CGPoint(x: 0, y: self.frame.height), parent: self)
        configPhysics()
-        print(playerController.position)
+        addScore()
+        //print(playerController.position)
         
     }
-   
+    func addScore(){
+        scoreLabel = SKLabelNode(text: "0")
+        scoreLabel.position = CGPoint(x: self.frame.width/2, y: self.size.height - 40)
+        scoreLabel.fontName = "AmericanTypewriter-Bold"
+        scoreLabel.fontSize = 36
+        scoreLabel.fontColor = UIColor.white
+        score = 0
+        self.addChild(scoreLabel)
+    }
     func addBackground(){
         let background = SKSpriteNode(imageNamed: "background")
         background.anchorPoint = CGPoint(x: 0, y: 0)
         background.position = CGPoint(x: 0, y: 0)
         background.zPosition = -1
         self.addChild(background)
+    
     }
     
     func configPhysics(){
@@ -42,10 +60,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let viewB=contact.bodyB.node as? View else {
                 return
         }
-        viewA.hanleContact?(viewB)
-        viewB.hanleContact?(viewA)
+        changeScene()
+        //viewA.hanleContact?(viewB)
+        //viewB.hanleContact?(viewA)
         
-        print("............")
+        
     }
     
     
@@ -72,10 +91,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let movementVector = CGVector(dx: location.x - previousLocation.x, dy: location.y - previousLocation.y)
             playerController.move(vector: movementVector)
         }
-        
-        
-
+    }
+     var lastTimeUpdate: TimeInterval = -1
+    override func update(_ currentTime: TimeInterval) {
+        if lastTimeUpdate == -1 {
+            lastTimeUpdate = currentTime
+        }
+        if currentTime - lastTimeUpdate > 0.1 {
+            lastTimeUpdate = currentTime
+            score += 1
+        }
     }
     
+    func changeScene(){
+
+        if let view = self.view as SKView? {
+            let defaults = UserDefaults.standard
+            defaults.set(score, forKey: "Score")
+            let scene = GameOverScene(size: view.frame.size)
+            view.presentScene(scene)
+        }
+    }
+    deinit {
+        print("Game Scene deinit")
+    }
   
 }

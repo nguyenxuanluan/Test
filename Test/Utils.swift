@@ -52,12 +52,25 @@ extension View {
         let sequence=SKAction.sequence([move,reset])
         self.run(SKAction.repeatForever(sequence))
     }
-    func moveCircle(radius:CGFloat,angle: CGFloat){
-         let circlePath=UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: radius, startAngle: angle, endAngle: angle-0.01, clockwise: true)
+    func moveCircle(radius:CGFloat,startAngle: CGFloat,rotate: CGFloat){
+        let position=self.position
+         let circlePath=UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: radius, startAngle: startAngle, endAngle: startAngle+rotate, clockwise: true)
         let move =  SKAction.follow(circlePath.cgPath, asOffset: true, orientToPath: false, speed: 200)
        // let move=SKAction.follow(circlePath.cgPath, speed: 200)
-        let reset=SKAction.run{self.position=CGPoint(x: 0, y: 0)}
+        let reset=SKAction.run{self.position=position}
         let sequence=SKAction.sequence([move,reset])
+        self.run(SKAction.repeatForever(sequence))
+        
+    }
+    func moveHalfCircle(radius:CGFloat,startAngle: CGFloat){
+        let position=self.position
+
+        let circlePath=UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: radius, startAngle: startAngle, endAngle: (startAngle - CGFloat(M_PI)), clockwise: true)
+        let move =  SKAction.follow(circlePath.cgPath, asOffset: true, orientToPath: false, speed: 100)
+        let reversePath = move.reversed()
+        // let move=SKAction.follow(circlePath.cgPath, speed: 200)
+        let reset=SKAction.run{self.position=position}
+        let sequence=SKAction.sequence([move,reversePath,reset])
         self.run(SKAction.repeatForever(sequence))
         
     }

@@ -19,7 +19,7 @@ class Stage1:Frame {
     func addEnemy(radius: CGFloat,angle: CGFloat){
         let enemy=EnemyController(texture: Textures.CIRCLE, resize: 4)
         enemy.config(position: CGPoint(x: 0, y: 0), parent: self.view)
-        enemy.view.moveCircle(radius: radius, angle: angle)
+        enemy.view.moveCircle(radius: radius, startAngle: angle,rotate: -0.01)
     }
     func addEnemy2(position: CGPoint,startPoint: CGPoint, endPoint: CGPoint){
         let enemy=EnemyController(texture: Textures.STICK ,resize: 8)

@@ -9,7 +9,7 @@
 import SpriteKit
 class Controller{
     let view:View
-    var parent:SKNode!
+    weak var parent:SKNode!
     init(view:View){
         self.view=view
     }
