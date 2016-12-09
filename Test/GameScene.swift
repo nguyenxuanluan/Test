@@ -15,6 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var positionPlayer : CGPoint!
     let playerController = PlayerController()
     var scoreLabel:SKLabelNode!
+    var startGameScene : Bool = false
      var score = 0 {
         didSet {
             scoreLabel.text = "\(score)"
@@ -22,16 +23,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func didMove(to view: SKView) {
-
-        let frame=Stage1(size: CGSize(width: self.frame.width, height: self.frame.height/2))
-        frame.config(position: CGPoint(x: self.frame.size.width/2, y: self.frame.height), parent: self)
-//        let frame=Stage2(size: CGSize(width: self.frame.width, height: self.frame.height/2))
-//        frame.config(position: CGPoint(x: 0, y: self.frame.height), parent: self)
-       configPhysics()
+     
+        configPhysics()
         addScore()
-        //print(playerController.position)
         
     }
+    
+    func round1(){
+        let frame = Stage1(size: CGSize(width: self.frame.width, height: self.frame.height/2))
+        frame.config(position: CGPoint(x: 0, y: self.frame.height), parent: self)
+    }
+    
     func addScore(){
         scoreLabel = SKLabelNode(text: "0")
         scoreLabel.position = CGPoint(x: self.frame.width/2, y: self.size.height - 40)
@@ -67,19 +69,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func addPlayer(location: CGPoint){
+        playerController.config(position: location, parent: self)
+        playerController.touchesBegan(location: location)
+
+    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
+            startGameScene = true
             let location = touch.location(in: self)
-            print(location)
-            playerController.config(position: location, parent: self)
-            playerController.touchesBegan(location: location)
-            print(playerController.position)
-        }
+            addPlayer(location: location)
+            round1()
+            }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         playerController.touchesEnded()
+        changeScene()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -94,12 +102,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
      var lastTimeUpdate: TimeInterval = -1
     override func update(_ currentTime: TimeInterval) {
+        if startGameScene == true{
         if lastTimeUpdate == -1 {
             lastTimeUpdate = currentTime
         }
         if currentTime - lastTimeUpdate > 0.1 {
             lastTimeUpdate = currentTime
             score += 1
+            }
         }
     }
     
