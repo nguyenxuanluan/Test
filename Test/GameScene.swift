@@ -14,39 +14,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var positionPlayer : CGPoint!
     let playerController = PlayerController()
-    
+    var scoreLabel:SKLabelNode!
+    var score:Int = 0 {
+        didSet {
+            scoreLabel.text = "\(score)"
+        }
+    }
     var startGameScene : Bool = false
-    
-    var scoreController = ScoreFrame(size: CGSize.zero)
-    var mainController = MainFrame(size: CGSize.zero)
-         
-    let positionScoreFrame : CGPoint! = nil
-    
-    
+    var scoreFrame: ScoreFrame!
+    var mainFrame: MainFrame!
+    func addScoreFrame(){
+        scoreFrame = ScoreFrame(size: CGSize(width: self.frame.size.width, height: self.frame.size.height/12))
+        scoreFrame.config(position: CGPoint(x: 0, y: self.size.height*11/12), parent: self)
+        addScore()
+
+    }
+    func addMainFrame(){
+        mainFrame = MainFrame(size: CGSize(width: self.frame.width, height: self.frame.size.height*11/12))
+        mainFrame.config(position: CGPoint(x: 0, y: 0), parent: self)
+    }
     override func didMove(to view: SKView) {
-        scoreFrame()
-        mainFrame()
+        
+        addScoreFrame()
+        addMainFrame()
         configPhysics()
-     
     }
     
     func addStage(){
-        let frameNode = FrameController(parent: self)
+        let frameNode = FrameController(parent: mainFrame.view)
         frameNode.runRandomStage()
-
-    func scoreFrame(){
-        scoreController = ScoreFrame(size: CGSize(width: self.size.width, height: self.size.height / 12))
-        let positionScoreFrame = CGPoint(x: self.size.width/2, y: (self.size.height - self.size.height/24))
-        scoreController.config(position: positionScoreFrame , parent: self)
     }
-    
-    func mainFrame(){
-        let frame = MainFrame(size: CGSize(width: self.size.width, height: self.size.height*11/12))
-        let positionScore = CGPoint(x: self.size.width/2, y: self.size.height*11/24)
-        frame.config(position: positionScore , parent: self)
+    func addScore(){
+        
+        self.scoreLabel = SKLabelNode(text: "0")
+        self.scoreLabel.position = CGPoint(x: self.frame.width/2, y: 10)
+        self.scoreLabel.fontName = "AmericanTypewriter-Bold"
+        self.scoreLabel.fontSize = 36
+        self.scoreLabel.fontColor = UIColor.white
+        self.score = 0
+        scoreFrame.view.addChild(scoreLabel)
     }
-    
-
        func addBackground(){
         let background = SKSpriteNode(imageNamed: "background")
         background.anchorPoint = CGPoint(x: 0, y: 0)
@@ -85,8 +92,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             startGameScene = true
             let location = touch.location(in: self)
             addPlayer(location: location)
-            mainController.round1()
-            mainController.test()
+            addStage()
+            
  
             
             }
@@ -116,7 +123,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         if currentTime - lastTimeUpdate > 0.1 {
             lastTimeUpdate = currentTime
-            scoreController.increase()
+            score+=1;
             }
         }
     }
@@ -127,8 +134,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let defaults = UserDefaults.standard
             defaults.set(score, forKey: "Score")
              var highestScore = UserDefaults.standard.integer(forKey: "highestScore")
-            print(highestScore)
-            print(score)
             if highestScore < score {
                 highestScore = score
             }
@@ -138,8 +143,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             view.presentScene(scene)
         }
     }
-    deinit {
-        print("Game Scene deinit")
-    }
+
   
 }
