@@ -25,7 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         let frame=Stage1(size: CGSize(width: self.frame.width, height: self.frame.height/2))
         frame.config(position: CGPoint(x: self.frame.size.width/2, y: self.frame.height), parent: self)
-//        let frame=Stage2(size: CGSize(width: self.frame.width, height: self.frame.height/2))
+ //       let frame=Stage2(size: CGSize(width: self.frame.width, height: self.frame.height/2))
 //        frame.config(position: CGPoint(x: 0, y: self.frame.height), parent: self)
        configPhysics()
         addScore()

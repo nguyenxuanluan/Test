@@ -63,8 +63,6 @@ class GameOverScene : SKScene {
             view.presentScene(scene)
         }
     }
-    deinit {
-        print("destroy")
-    }
+    
     }
 

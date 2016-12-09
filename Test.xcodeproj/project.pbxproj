@@ -27,6 +27,7 @@
 		F1B79ECE1DF8376C0065DFE7 /* Stage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B79ECD1DF8376C0065DFE7 /* Stage1.swift */; };
 		F1B79ED01DF83B840065DFE7 /* Stage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B79ECF1DF83B840065DFE7 /* Stage2.swift */; };
 		F1B974871DF9A4DF00C1E9BC /* Stage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B974861DF9A4DF00C1E9BC /* Stage3.swift */; };
+		F1C3A64A1DFB19C200ABEA50 /* GameMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6491DFB19C200ABEA50 /* GameMenu.swift */; };
 		F1D686901DFA45B000637BDE /* Stage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6868F1DFA45B000637BDE /* Stage4.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		F1B79ECD1DF8376C0065DFE7 /* Stage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage1.swift; sourceTree = "<group>"; };
 		F1B79ECF1DF83B840065DFE7 /* Stage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage2.swift; sourceTree = "<group>"; };
 		F1B974861DF9A4DF00C1E9BC /* Stage3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage3.swift; sourceTree = "<group>"; };
+		F1C3A6491DFB19C200ABEA50 /* GameMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMenu.swift; sourceTree = "<group>"; };
 		F1D6868F1DFA45B000637BDE /* Stage4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				F18CDFCB1DF0885000D24807 /* Controllers */,
 				F18CDFC81DF087FA00D24807 /* Views */,
 				F18CDFAE1DF0877E00D24807 /* AppDelegate.swift */,
+				F1C3A6491DFB19C200ABEA50 /* GameMenu.swift */,
 				F148D1E21DFABCC000A5D8B9 /* GameOverScene.swift */,
 				F18CDFB41DF0877E00D24807 /* GameScene.swift */,
 				F18CDFB61DF0877E00D24807 /* GameViewController.swift */,
@@ -227,6 +230,7 @@
 				F18CDFCF1DF088AE00D24807 /* EnemyController.swift in Sources */,
 				F1B79ED01DF83B840065DFE7 /* Stage2.swift in Sources */,
 				F18CDFCD1DF0885C00D24807 /* Controller.swift in Sources */,
+				F1C3A64A1DFB19C200ABEA50 /* GameMenu.swift in Sources */,
 				F1B974871DF9A4DF00C1E9BC /* Stage3.swift in Sources */,
 				F18CDFCA1DF0880A00D24807 /* Views.swift in Sources */,
 				F148D1E31DFABCC000A5D8B9 /* GameOverScene.swift in Sources */,
