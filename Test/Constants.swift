@@ -17,9 +17,11 @@ struct Textures{
     static let BG = SKTexture(imageNamed: "background")
     static let SQUARE = SKTexture(imageNamed: "enemy1")
     static let STICK = SKTexture(imageNamed: "thanhngang2")
+    static let GAME_MENU_BG = SKTexture(imageNamed: "gamemenu")
+}
+struct FontName {
+    static let AMERICA = "AmericanTypewriter-Bold"
 }
 //let PLAYER_TEXTURE=SKTexture(imageNamed: "6")
 let midPoint=CGPoint(x: 160, y: 300)
-
-
 

@@ -88,3 +88,13 @@ extension View {
     }
     
 }
+extension SKScene{
+    static func addLabel(name: String,position: CGPoint,fontName: String,fontSize: CGFloat, fontColor: UIColor ){
+        let label = SKLabelNode(text: name)
+        label.position = position
+        label.fontName = fontName
+        label.fontSize = fontSize
+        label.fontColor = fontColor
+        //self.addChild(label)
+    }
+}
