@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845AEFC21DFB276C00A1BFBA /* ScoreFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AEFC11DFB276C00A1BFBA /* ScoreFrame.swift */; };
+		845AEFC51DFB2D2E00A1BFBA /* MainFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AEFC41DFB2D2E00A1BFBA /* MainFrame.swift */; };
 		84E9EF021DF85B6700705948 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9EF011DF85B6700705948 /* PlayerController.swift */; };
 		84E9EF061DF87A7900705948 /* fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84E9EF051DF87A7900705948 /* fire.sks */; };
 		F1325F631DF7FFB000184171 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1325F621DF7FFB000184171 /* Frame.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		845AEFC11DFB276C00A1BFBA /* ScoreFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreFrame.swift; sourceTree = "<group>"; };
+		845AEFC41DFB2D2E00A1BFBA /* MainFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFrame.swift; sourceTree = "<group>"; };
 		84E9EF011DF85B6700705948 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		84E9EF051DF87A7900705948 /* fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fire.sks; sourceTree = "<group>"; };
 		F1325F621DF7FFB000184171 /* Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
@@ -69,10 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F1325F611DF7FF9E00184171 /* Stage */ = {
+		845AEFC31DFB28D200A1BFBA /* Frame */ = {
 			isa = PBXGroup;
 			children = (
 				F1325F621DF7FFB000184171 /* Frame.swift */,
+				845AEFC11DFB276C00A1BFBA /* ScoreFrame.swift */,
+				845AEFC41DFB2D2E00A1BFBA /* MainFrame.swift */,
+			);
+			name = Frame;
+			sourceTree = "<group>";
+		};
+		F1325F611DF7FF9E00184171 /* Stage */ = {
+			isa = PBXGroup;
+			children = (
 				F1B79ECD1DF8376C0065DFE7 /* Stage1.swift */,
 				F1B79ECF1DF83B840065DFE7 /* Stage2.swift */,
 				F1B974861DF9A4DF00C1E9BC /* Stage3.swift */,
@@ -100,6 +113,7 @@
 		F18CDFAD1DF0877E00D24807 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				845AEFC31DFB28D200A1BFBA /* Frame */,
 				F1325F611DF7FF9E00184171 /* Stage */,
 				F18CDFD01DF0893300D24807 /* Constants */,
 				F18CDFCB1DF0885000D24807 /* Controllers */,
@@ -223,12 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F18CDFB51DF0877E00D24807 /* GameScene.swift in Sources */,
+				845AEFC21DFB276C00A1BFBA /* ScoreFrame.swift in Sources */,
 				F1D686901DFA45B000637BDE /* Stage4.swift in Sources */,
 				F18CDFB71DF0877E00D24807 /* GameViewController.swift in Sources */,
 				84E9EF021DF85B6700705948 /* PlayerController.swift in Sources */,
 				F18CDFAF1DF0877E00D24807 /* AppDelegate.swift in Sources */,
 				F18CDFCF1DF088AE00D24807 /* EnemyController.swift in Sources */,
 				F1B79ED01DF83B840065DFE7 /* Stage2.swift in Sources */,
+				845AEFC51DFB2D2E00A1BFBA /* MainFrame.swift in Sources */,
 				F18CDFCD1DF0885C00D24807 /* Controller.swift in Sources */,
 				F1C3A64A1DFB19C200ABEA50 /* GameMenu.swift in Sources */,
 				F1B974871DF9A4DF00C1E9BC /* Stage3.swift in Sources */,

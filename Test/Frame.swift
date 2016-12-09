@@ -15,7 +15,6 @@ class Frame :Controller {
     }
     override func config(position: CGPoint, parent: SKNode) {
         super.config(position: position, parent: parent)
-        //view.anchorPoint=CGPoint(x: 0, y: 1)
         configMove()
         configAction()
     }
