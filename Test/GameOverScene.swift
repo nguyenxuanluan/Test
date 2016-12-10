@@ -8,13 +8,18 @@
 
 import SpriteKit
 class GameOverScene : SKScene {
+    let soundEndGame = SKAction.playSoundFileNamed("gameover.wav", waitForCompletion: true)
+
     var playAgainLabel: SKLabelNode!
     override func didMove(to view: SKView) {
+        self.run(soundEndGame)
         addBackground()
         //addGameOverLabel()
         addPlayAgainLabel()
         addScoreLabel()
         addHighestScoreLabel()
+        
+        
     }
     
     func addBackground(){

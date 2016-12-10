@@ -8,7 +8,7 @@
 
 import Foundation
 import SpriteKit
-class Frame :Controller {
+class Frame : Controller {
     let SPEED:CGFloat = 20
     init(size: CGSize) {
         super.init(view: View(color: UIColor.clear, size: size))

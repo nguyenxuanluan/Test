@@ -8,6 +8,7 @@
 
 import SpriteKit
 
+
 class PlayerController : Controller {
     
     var firstTouchLocation : CGPoint?
@@ -15,7 +16,7 @@ class PlayerController : Controller {
     var gameEnd = false
     
     init() {
-        super.init(view: View(color: UIColor.red, size: CGSize(width: 10, height: 10)))
+        super.init(view: View(color: UIColor.clear, size: CGSize(width: 10, height: 10)))
     }
     
     override func config(position: CGPoint, parent: SKNode) {

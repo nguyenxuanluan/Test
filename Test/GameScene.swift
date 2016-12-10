@@ -8,11 +8,13 @@
 
 import SpriteKit
 import GameplayKit
-import  Foundation
+import  AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    var positionPlayer : CGPoint!
+    var backgroundSound: AVAudioPlayer!
+    let path = Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")!
+ 
     let playerController = PlayerController()
     var scoreLabel:SKLabelNode!
     var score:Int = 0 {
@@ -23,6 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var startGameScene : Bool = false
     var scoreFrame: ScoreFrame!
     var mainFrame: MainFrame!
+    var smallFrame: Frame!
     func addScoreFrame(){
         scoreFrame = ScoreFrame(size: CGSize(width: self.frame.size.width, height: self.frame.size.height/12))
         scoreFrame.config(position: CGPoint(x: 0, y: self.size.height*11/12), parent: self)
@@ -33,11 +36,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         mainFrame = MainFrame(size: CGSize(width: self.frame.width, height: self.frame.size.height*11/12))
         mainFrame.config(position: CGPoint(x: 0, y: 0), parent: self)
     }
+    
+    func addSmallFrame(){
+        smallFrame = Frame(size: CGSize(width: self.frame.width, height: self.frame.size.height/3))
+        smallFrame.config(position: CGPoint(x: 0,y: 0), parent: self, speed: Speed.SM_SPEED)
+    }
     override func didMove(to view: SKView) {
-        
+      
+        playMusicBackGround()
         addScoreFrame()
         addMainFrame()
+        addSmallFrame()
         configPhysics()
+    }
+    
+    func playMusicBackGround() {
+        
+        let url = URL(fileURLWithPath: path)
+        do{
+            let sound = try AVAudioPlayer(contentsOf: url)
+            backgroundSound = sound
+            sound.play()
+        }catch{
+            print(">>> No sound <<<<")
+        }
     }
     
     func addStage(){
@@ -85,6 +107,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         playerController.touchesBegan(location: location)
     }
     
+ 
+
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
@@ -93,7 +119,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.location(in: self)
             addPlayer(location: location)
             addStage()
-            
+
  
             
             }
@@ -129,6 +155,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func changeScene(){
+        
+        if backgroundSound != nil{
+            backgroundSound.stop()
+            backgroundSound = nil
+            print("sound has been stopped")
+        }
 
         if let view = self.view as SKView? {
             let defaults = UserDefaults.standard
@@ -137,11 +169,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if highestScore < score {
                 highestScore = score
             }
-            defaults.set(highestScore, forKey: "highestScore")
             
+            defaults.set(highestScore, forKey: "highestScore")
             let scene = GameOverScene(size: view.frame.size)
             view.presentScene(scene)
         }
+        
     }
 
   

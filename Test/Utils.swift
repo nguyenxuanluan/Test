@@ -87,6 +87,19 @@ extension View {
         self.run(SKAction.repeatForever(action))
     }
     
+    func moveToNonReverse(position: CGPoint, startPoint: CGPoint, endPoint: CGPoint){
+        let path = CGMutablePath()
+        let point = self.position
+        path.move(to: startPoint)
+        path.addLine(to: endPoint)
+        let followPath = SKAction.follow(path, asOffset: true, orientToPath: false, speed: 100)
+        let reset = SKAction.run{
+            self.position = point
+        }
+        let action = SKAction.sequence([followPath, reset])
+        self.run(.repeatForever(action))
+    }
+    
 }
 extension SKScene{
     static func addLabel(name: String,position: CGPoint,fontName: String,fontSize: CGFloat, fontColor: UIColor ){
