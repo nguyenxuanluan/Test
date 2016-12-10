@@ -35,6 +35,6 @@ class Stage2: Frame {
     func addEnemy2(position: CGPoint,startPoint: CGPoint, endPoint: CGPoint){
             let enemy=EnemyController(texture: Textures.SQUARE ,resize: 5)
             enemy.config(position: position, parent: self.view)
-            enemy.view.moveToAndReverse(position: position,startPoint: startPoint, endPoint: endPoint)
+            enemy.view.moveToAndReverse(startPoint: startPoint, endPoint: endPoint)
         }
 }

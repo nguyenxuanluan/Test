@@ -45,15 +45,14 @@ class FrameController {
             frameNode.config(position: CGPoint(x: self.parent.frame.width/2, y: self.parent.frame.height), parent: self.parent, speed: Speed.SM_SPEED)
     }
         var stageArr = [SKAction]()
-//        stageArr=[runStage1,runStage2,runStage3,runStage4]
-        stageArr=[runStage6]
+        stageArr=[runStage1,runStage2,runStage3,runStage4,runStage5,runStage6]
         return stageArr
     }
     
     func runRandomStage(){
         let stageArr = addArrayofStage()
         let spawnFrame = SKAction.run {
-            let random = Int(arc4random_uniform(1))
+            let random = Int(arc4random_uniform(6))
             self.parent.run(stageArr[random])
         }
         self.parent.run(.repeatForever(.sequence([spawnFrame,.wait(forDuration: TIME_DURATION )])))

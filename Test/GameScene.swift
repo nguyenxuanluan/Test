@@ -176,6 +176,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
     }
+    deinit {
+        print("ashajsakjkajskansaanajhsaakakjsa")
+    }
 
   
 }
