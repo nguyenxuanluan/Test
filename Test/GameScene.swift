@@ -95,7 +95,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let viewB=contact.bodyB.node as? View else {
                 return
         }
-        //changeScene()
+        changeScene()
         viewA.hanleContact?(viewB)
         viewB.hanleContact?(viewA)
         

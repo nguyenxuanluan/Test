@@ -13,7 +13,7 @@ class Stage6 : Frame {
     override func configAction() {
         view.anchorPoint=CGPoint(x: 0.5, y: 0.5)
         addEnemy2(position: CGPoint(x: 0, y: 0),startPoint: CGPoint(x: -120, y: 0), endPoint: CGPoint(x: +200, y: 0))
-        addEnemy2(position: CGPoint(x: 0, y: 0),startPoint: CGPoint(x: 120, y: 0), endPoint: CGPoint(x: -200, y: 0))
+        addEnemy2(position: CGPoint(x: 0, y: 0),startPoint: CGPoint(x: +120, y: 0), endPoint: CGPoint(x: -200, y: 0))
         
     }
     func addEnemy2(position: CGPoint,startPoint: CGPoint, endPoint: CGPoint){
@@ -22,3 +22,4 @@ class Stage6 : Frame {
         enemy.view.moveToAndReverse(startPoint: startPoint, endPoint: endPoint)
     }
 }
+
