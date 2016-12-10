@@ -38,6 +38,7 @@
 		F1C3A65A1DFBC65000ABEA50 /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6591DFBC65000ABEA50 /* gameover.wav */; };
 		F1C3A65C1DFBC6B000ABEA50 /* breakrecord.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A65B1DFBC6B000ABEA50 /* breakrecord.wav */; };
 		F1C3A65E1DFBC6B900ABEA50 /* goSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A65D1DFBC6B800ABEA50 /* goSound.mp3 */; };
+		F1C3A6601DFBC76B00ABEA50 /* Stage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A65F1DFBC76B00ABEA50 /* Stage6.swift */; };
 		F1D686901DFA45B000637BDE /* Stage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6868F1DFA45B000637BDE /* Stage4.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		F1C3A6591DFBC65000ABEA50 /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameover.wav; path = "../../Downloads/Archive (1)/gameover.wav"; sourceTree = "<group>"; };
 		F1C3A65B1DFBC6B000ABEA50 /* breakrecord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = breakrecord.wav; path = ../../Downloads/breakrecord.wav; sourceTree = "<group>"; };
 		F1C3A65D1DFBC6B800ABEA50 /* goSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goSound.mp3; path = ../../Downloads/goSound.mp3; sourceTree = "<group>"; };
+		F1C3A65F1DFBC76B00ABEA50 /* Stage6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage6.swift; sourceTree = "<group>"; };
 		F1D6868F1DFA45B000637BDE /* Stage4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				F1B974861DF9A4DF00C1E9BC /* Stage3.swift */,
 				F1D6868F1DFA45B000637BDE /* Stage4.swift */,
 				F1C3A6551DFBB1E100ABEA50 /* Stage5.swift */,
+				F1C3A65F1DFBC76B00ABEA50 /* Stage6.swift */,
 			);
 			name = Stage;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				F18CDFB51DF0877E00D24807 /* GameScene.swift in Sources */,
 				845AEFC21DFB276C00A1BFBA /* ScoreFrame.swift in Sources */,
 				F1D686901DFA45B000637BDE /* Stage4.swift in Sources */,
+				F1C3A6601DFBC76B00ABEA50 /* Stage6.swift in Sources */,
 				F18CDFB71DF0877E00D24807 /* GameViewController.swift in Sources */,
 				845AEFCD1DFBB41400A1BFBA /* Stage6.swift in Sources */,
 				84E9EF021DF85B6700705948 /* PlayerController.swift in Sources */,
