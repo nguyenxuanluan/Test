@@ -74,14 +74,15 @@ extension View {
         self.run(SKAction.repeatForever(sequence))
         
     }
-    func moveToAndReverse(position: CGPoint,startPoint:CGPoint,endPoint:CGPoint){
+    func moveToAndReverse(startPoint:CGPoint,endPoint:CGPoint){
         let path=CGMutablePath()
+        let point = self.position
         path.move(to: startPoint)
         path.addLine(to: endPoint)
         let followPath=SKAction.follow(path, asOffset: true, orientToPath: false, speed: 100)
         let reversePath=followPath.reversed()
         let reset = SKAction.run {
-            self.position = position
+            self.position = point
         }
         let action=SKAction.sequence([followPath,reversePath,reset])
         self.run(SKAction.repeatForever(action))

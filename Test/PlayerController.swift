@@ -44,6 +44,8 @@ class PlayerController : Controller {
             otherView in
             otherView.removeFromParent()
             print("BOom")
+            self.configExplosion()
+            self.particleEffect()
         }
     }
     
@@ -78,6 +80,18 @@ class PlayerController : Controller {
         particle?.targetNode=parent.scene
         particle?.particleTexture=SKTexture(imageNamed: "spark")
         view.addChild(particle!)
+    }
+    func configExplosion(){
+        let explosion = SKAction.playSoundFileNamed("goSound.mp3", waitForCompletion: false)
+        self.view.run(explosion)
+    }
+    func particleEffect(){
+        let particle = SKEmitterNode(fileNamed: "explosion.sks")
+        particle?.position = self.position
+        let add=SKAction.run{self.parent.addChild(particle!)}
+        let remove = SKAction.run{particle?.removeFromParent()}
+        parent.run(.sequence([add,.wait(forDuration: 1),remove]))
+        
     }
     
 }
