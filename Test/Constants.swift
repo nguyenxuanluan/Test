@@ -31,6 +31,10 @@ struct Speed {
     static let VLAR_SPEED : CGFloat = 400
 
 }
+struct Sound {
+    static let  GAME_OVER = "goSound"
+    static let BREAK_100 = "breakrecord.wav"
+}
 //let PLAYER_TEXTURE=SKTexture(imageNamed: "6")
 let midPoint=CGPoint(x: 160, y: 300)
 

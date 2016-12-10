@@ -95,7 +95,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let viewB=contact.bodyB.node as? View else {
                 return
         }
-        changeScene()
+        //changeScene()
         viewA.hanleContact?(viewB)
         viewB.hanleContact?(viewA)
         
@@ -149,7 +149,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         if currentTime - lastTimeUpdate > 0.1 {
             lastTimeUpdate = currentTime
-            score+=1;
+            score+=1
+            if score % 100 == 0 {
+                playSound(fileName: Sound.BREAK_100)
+            }
             }
         }
     }
@@ -178,6 +181,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     deinit {
         print("ashajsakjkajskansaanajhsaakakjsa")
+    }
+   
+    func playSound(fileName: String){
+        let playSound = SKAction.playSoundFileNamed(fileName, waitForCompletion: false)
+        self.run(playSound)
     }
 
   
