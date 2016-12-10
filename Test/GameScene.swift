@@ -13,6 +13,7 @@ import  AVFoundation
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var backgroundSound: AVAudioPlayer!
+    
     let path = Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")!
  
     let playerController = PlayerController()
@@ -57,6 +58,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let sound = try AVAudioPlayer(contentsOf: url)
             backgroundSound = sound
             sound.play()
+            sound.numberOfLoops = -1
+            
         }catch{
             print(">>> No sound <<<<")
         }
