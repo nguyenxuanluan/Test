@@ -12,6 +12,8 @@
 		845AEFC71DFB81FA00A1BFBA /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845AEFC61DFB81FA00A1BFBA /* BackgroundMusic.mp3 */; };
 		845AEFC91DFB884700A1BFBA /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = 845AEFC81DFB884700A1BFBA /* gameover.wav */; };
 		845AEFCD1DFBB41400A1BFBA /* Stage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AEFCC1DFBB41400A1BFBA /* Stage6.swift */; };
+		847DE0DD1DFBC6D30039D3DC /* breakrecord.wav in Resources */ = {isa = PBXBuildFile; fileRef = 847DE0DC1DFBC6D30039D3DC /* breakrecord.wav */; };
+		847DE0DF1DFBC6DE0039D3DC /* goSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 847DE0DE1DFBC6DE0039D3DC /* goSound.mp3 */; };
 		84E9EF021DF85B6700705948 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9EF011DF85B6700705948 /* PlayerController.swift */; };
 		84E9EF061DF87A7900705948 /* fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84E9EF051DF87A7900705948 /* fire.sks */; };
 		F1325F631DF7FFB000184171 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1325F621DF7FFB000184171 /* Frame.swift */; };
@@ -45,6 +47,8 @@
 		845AEFC61DFB81FA00A1BFBA /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = "../../Downloads/Marimba-music/BackgroundMusic.mp3"; sourceTree = "<group>"; };
 		845AEFC81DFB884700A1BFBA /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameover.wav; path = ../../Downloads/gameover.wav; sourceTree = "<group>"; };
 		845AEFCC1DFBB41400A1BFBA /* Stage6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage6.swift; sourceTree = "<group>"; };
+		847DE0DC1DFBC6D30039D3DC /* breakrecord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = breakrecord.wav; sourceTree = "<group>"; };
+		847DE0DE1DFBC6DE0039D3DC /* goSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = goSound.mp3; sourceTree = "<group>"; };
 		84E9EF011DF85B6700705948 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		84E9EF051DF87A7900705948 /* fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fire.sks; sourceTree = "<group>"; };
 		F1325F621DF7FFB000184171 /* Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			children = (
 				845AEFC81DFB884700A1BFBA /* gameover.wav */,
 				845AEFC61DFB81FA00A1BFBA /* BackgroundMusic.mp3 */,
+				847DE0DC1DFBC6D30039D3DC /* breakrecord.wav */,
+				847DE0DE1DFBC6DE0039D3DC /* goSound.mp3 */,
 				845AEFC31DFB28D200A1BFBA /* Frame */,
 				F1325F611DF7FF9E00184171 /* Stage */,
 				F18CDFD01DF0893300D24807 /* Constants */,
@@ -243,7 +249,9 @@
 				F18CDFBC1DF0877E00D24807 /* Assets.xcassets in Resources */,
 				F18CDFBF1DF0877E00D24807 /* LaunchScreen.storyboard in Resources */,
 				F1C3A6501DFB72E400ABEA50 /* explosion.sks in Resources */,
+				847DE0DF1DFBC6DE0039D3DC /* goSound.mp3 in Resources */,
 				F18CDFB31DF0877E00D24807 /* Actions.sks in Resources */,
+				847DE0DD1DFBC6D30039D3DC /* breakrecord.wav in Resources */,
 				845AEFC91DFB884700A1BFBA /* gameover.wav in Resources */,
 				84E9EF061DF87A7900705948 /* fire.sks in Resources */,
 			);
