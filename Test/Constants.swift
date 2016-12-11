@@ -11,6 +11,7 @@
 import SpriteKit
 let ENEMY_MASK=UInt32(1<<0)
 let PLAYER_MASK=UInt32(1<<1)
+let SHIELD_MASK = UInt32( 1 << 2)
 struct Textures{
     
   static let  CIRCLE = SKTexture(imageNamed: "circle1")
@@ -18,6 +19,7 @@ struct Textures{
     static let SQUARE = SKTexture(imageNamed: "square")
     static let STICK = SKTexture(imageNamed: "thanhngang2")
     static let GAME_MENU_BG = SKTexture(imageNamed: "gamemenu")
+    static let SHIELD = SKTexture(imageNamed: "shield")
 }
 struct FontName {
     static let AMERICA = "AmericanTypewriter-Bold"

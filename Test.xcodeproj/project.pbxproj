@@ -40,6 +40,7 @@
 		F1C3A6A91DFBD07500ABEA50 /* Stage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6A81DFBD07500ABEA50 /* Stage6.swift */; };
 		F1C3A6AB1DFBD34600ABEA50 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6AA1DFBD34600ABEA50 /* BackgroundMusic.mp3 */; };
 		F1C3A6AD1DFBD35800ABEA50 /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6AC1DFBD35800ABEA50 /* gameover.wav */; };
+		F1C3A6AF1DFBD86400ABEA50 /* ShieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6AE1DFBD86400ABEA50 /* ShieldController.swift */; };
 		F1D686901DFA45B000637BDE /* Stage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6868F1DFA45B000637BDE /* Stage4.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		F1C3A6A81DFBD07500ABEA50 /* Stage6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage6.swift; sourceTree = "<group>"; };
 		F1C3A6AA1DFBD34600ABEA50 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = "../../Archive (1)/BackgroundMusic.mp3"; sourceTree = "<group>"; };
 		F1C3A6AC1DFBD35800ABEA50 /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameover.wav; path = "../../Archive (1)/gameover.wav"; sourceTree = "<group>"; };
+		F1C3A6AE1DFBD86400ABEA50 /* ShieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldController.swift; sourceTree = "<group>"; };
 		F1D6868F1DFA45B000637BDE /* Stage4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 				F18CDFCE1DF088AE00D24807 /* EnemyController.swift */,
 				84E9EF011DF85B6700705948 /* PlayerController.swift */,
 				F1C3A64B1DFB27CB00ABEA50 /* FrameController.swift */,
+				F1C3A6AE1DFBD86400ABEA50 /* ShieldController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				845AEFC51DFB2D2E00A1BFBA /* MainFrame.swift in Sources */,
 				F18CDFCD1DF0885C00D24807 /* Controller.swift in Sources */,
 				F1C3A64A1DFB19C200ABEA50 /* GameMenu.swift in Sources */,
+				F1C3A6AF1DFBD86400ABEA50 /* ShieldController.swift in Sources */,
 				F1B974871DF9A4DF00C1E9BC /* Stage3.swift in Sources */,
 				F18CDFCA1DF0880A00D24807 /* Views.swift in Sources */,
 				F148D1E31DFABCC000A5D8B9 /* GameOverScene.swift in Sources */,

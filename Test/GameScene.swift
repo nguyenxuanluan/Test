@@ -11,7 +11,7 @@ import GameplayKit
 import  AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
+    let TIME_SPAWN_SHILED:Double = 8
     var backgroundSound: AVAudioPlayer!
     let path = Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")!
  
@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreFrame: ScoreFrame!
     var mainFrame: MainFrame!
     var smallFrame: Frame!
+    var time: Timer!
     func addScoreFrame(){
         scoreFrame = ScoreFrame(size: CGSize(width: self.frame.size.width, height: self.frame.size.height/12))
         scoreFrame.config(position: CGPoint(x: 0, y: self.size.height*11/12), parent: self)
@@ -41,13 +42,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         smallFrame = Frame(size: CGSize(width: self.frame.width, height: self.frame.size.height/3))
         smallFrame.config(position: CGPoint(x: 0,y: 0), parent: self, speed: Speed.SM_SPEED)
     }
+    func addShield(){
+        let shield = ShiledConroller()
+        let random = CGFloat(arc4random_uniform(9) + 1)/10
+        shield.config(position: CGPoint(x: self.frame.width*random , y: self.frame.height), parent: self)
+    }
     override func didMove(to view: SKView) {
-      
+        
         playMusicBackGround()
         addScoreFrame()
         addMainFrame()
         addSmallFrame()
         configPhysics()
+        time = Timer.scheduledTimer(timeInterval: TIME_SPAWN_SHILED, target: self, selector: #selector(addShield), userInfo: nil, repeats: true)
     }
     
     func playMusicBackGround() {
@@ -95,9 +102,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let viewB=contact.bodyB.node as? View else {
                 return
         }
-        changeScene()
+        if (contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask)
+                == (PLAYER_MASK | SHIELD_MASK ){
+            viewA.hanleContact?(viewB)
+            viewB.hanleContact?(viewA)
+        } else {
         viewA.hanleContact?(viewB)
-        viewB.hanleContact?(viewA)
+            viewB.hanleContact?(viewA)
+            changeScene()
+        }
         
         
     }

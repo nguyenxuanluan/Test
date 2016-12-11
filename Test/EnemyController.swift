@@ -17,10 +17,14 @@ class EnemyController:Controller {
         view.physicsBody?.categoryBitMask=ENEMY_MASK
         view.physicsBody?.contactTestBitMask=PLAYER_MASK
         view.physicsBody?.collisionBitMask=0
+        
         view.hanleContact = {
             otherView in
             otherView.removeFromParent()
+            
             print("contact")
         }
 }
+    
 }
+

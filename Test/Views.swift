@@ -9,7 +9,9 @@
 import SpriteKit
 
 typealias HandleContactType = (View) -> ()
+typealias HandleShieldType = () -> ()
 
 class View: SKSpriteNode {
     var hanleContact: HandleContactType?
+    var handleShile: HandleShieldType?
 }
