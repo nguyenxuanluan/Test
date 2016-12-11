@@ -25,8 +25,8 @@ struct FontName {
     static let AMERICA = "AmericanTypewriter-Bold"
 }
 struct Speed {
-    static let SM_SPEED : CGFloat = 100
-    static let NO_SPEED : CGFloat = 200
+    static let SM_SPEED : CGFloat = 70
+    static let NO_SPEED : CGFloat = 140
 
     static let LAR_SPEED : CGFloat = 300
     

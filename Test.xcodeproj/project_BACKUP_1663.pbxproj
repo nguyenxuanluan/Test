@@ -42,9 +42,12 @@
 		F1C3A6501DFB72E400ABEA50 /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A64F1DFB72E400ABEA50 /* explosion.sks */; };
 		F1C3A6561DFBB1E100ABEA50 /* Stage5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6551DFBB1E100ABEA50 /* Stage5.swift */; };
 		F1C3A6A91DFBD07500ABEA50 /* Stage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6A81DFBD07500ABEA50 /* Stage6.swift */; };
+<<<<<<< HEAD
 		F1C3A6AB1DFBD34600ABEA50 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6AA1DFBD34600ABEA50 /* BackgroundMusic.mp3 */; };
 		F1C3A6AD1DFBD35800ABEA50 /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6AC1DFBD35800ABEA50 /* gameover.wav */; };
 		F1C3A6AF1DFBD86400ABEA50 /* ShieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6AE1DFBD86400ABEA50 /* ShieldController.swift */; };
+=======
+>>>>>>> 74d72e493b01c20d87c4384178cef2785772f7a3
 		F1D686901DFA45B000637BDE /* Stage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6868F1DFA45B000637BDE /* Stage4.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +89,12 @@
 		F1C3A64F1DFB72E400ABEA50 /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
 		F1C3A6551DFBB1E100ABEA50 /* Stage5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage5.swift; sourceTree = "<group>"; };
 		F1C3A6A81DFBD07500ABEA50 /* Stage6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage6.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		F1C3A6AA1DFBD34600ABEA50 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = "../../Archive (1)/BackgroundMusic.mp3"; sourceTree = "<group>"; };
+		F1C3A6AC1DFBD35800ABEA50 /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameover.wav; path = "../../Archive (1)/gameover.wav"; sourceTree = "<group>"; };
+		F1C3A6AE1DFBD86400ABEA50 /* ShieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldController.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> 74d72e493b01c20d87c4384178cef2785772f7a3
 		F1D6868F1DFA45B000637BDE /* Stage4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

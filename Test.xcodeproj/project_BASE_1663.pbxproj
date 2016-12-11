@@ -9,14 +9,7 @@
 /* Begin PBXBuildFile section */
 		845AEFC21DFB276C00A1BFBA /* ScoreFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AEFC11DFB276C00A1BFBA /* ScoreFrame.swift */; };
 		845AEFC51DFB2D2E00A1BFBA /* MainFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AEFC41DFB2D2E00A1BFBA /* MainFrame.swift */; };
-		84BE9B5D1DFBD9F500A230BF /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84BE9B591DFBD9F500A230BF /* BackgroundMusic.mp3 */; };
-		84BE9B5E1DFBD9F500A230BF /* breakrecord.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84BE9B5A1DFBD9F500A230BF /* breakrecord.wav */; };
-		84BE9B5F1DFBD9F500A230BF /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84BE9B5B1DFBD9F500A230BF /* gameover.wav */; };
-		84BE9B601DFBD9F500A230BF /* goSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84BE9B5C1DFBD9F500A230BF /* goSound.mp3 */; };
-		84BE9B621DFBDA3400A230BF /* Stage7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE9B611DFBDA3400A230BF /* Stage7.swift */; };
-		84BE9B641DFBE12E00A230BF /* Stage8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE9B631DFBE12E00A230BF /* Stage8.swift */; };
-		84BE9B661DFBE41700A230BF /* Stage9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE9B651DFBE41700A230BF /* Stage9.swift */; };
-		84BE9B681DFBF29500A230BF /* Stage10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE9B671DFBF29500A230BF /* Stage10.swift */; };
+		847DE0DF1DFBC6DE0039D3DC /* goSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 847DE0DE1DFBC6DE0039D3DC /* goSound.mp3 */; };
 		84E9EF021DF85B6700705948 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9EF011DF85B6700705948 /* PlayerController.swift */; };
 		84E9EF061DF87A7900705948 /* fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84E9EF051DF87A7900705948 /* fire.sks */; };
 		F1325F631DF7FFB000184171 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1325F621DF7FFB000184171 /* Frame.swift */; };
@@ -41,24 +34,20 @@
 		F1C3A64C1DFB27CB00ABEA50 /* FrameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A64B1DFB27CB00ABEA50 /* FrameController.swift */; };
 		F1C3A6501DFB72E400ABEA50 /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A64F1DFB72E400ABEA50 /* explosion.sks */; };
 		F1C3A6561DFBB1E100ABEA50 /* Stage5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6551DFBB1E100ABEA50 /* Stage5.swift */; };
+		F1C3A6581DFBC64800ABEA50 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6571DFBC64800ABEA50 /* BackgroundMusic.mp3 */; };
+		F1C3A65A1DFBC65000ABEA50 /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6591DFBC65000ABEA50 /* gameover.wav */; };
+		F1C3A65E1DFBC6B900ABEA50 /* goSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A65D1DFBC6B800ABEA50 /* goSound.mp3 */; };
 		F1C3A6A91DFBD07500ABEA50 /* Stage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6A81DFBD07500ABEA50 /* Stage6.swift */; };
 		F1C3A6AB1DFBD34600ABEA50 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6AA1DFBD34600ABEA50 /* BackgroundMusic.mp3 */; };
 		F1C3A6AD1DFBD35800ABEA50 /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C3A6AC1DFBD35800ABEA50 /* gameover.wav */; };
-		F1C3A6AF1DFBD86400ABEA50 /* ShieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3A6AE1DFBD86400ABEA50 /* ShieldController.swift */; };
 		F1D686901DFA45B000637BDE /* Stage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6868F1DFA45B000637BDE /* Stage4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		845AEFC11DFB276C00A1BFBA /* ScoreFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreFrame.swift; sourceTree = "<group>"; };
 		845AEFC41DFB2D2E00A1BFBA /* MainFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFrame.swift; sourceTree = "<group>"; };
-		84BE9B591DFBD9F500A230BF /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = ../../Documents/Archive/BackgroundMusic.mp3; sourceTree = "<group>"; };
-		84BE9B5A1DFBD9F500A230BF /* breakrecord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = breakrecord.wav; path = ../../Documents/Archive/breakrecord.wav; sourceTree = "<group>"; };
-		84BE9B5B1DFBD9F500A230BF /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameover.wav; path = ../../Documents/Archive/gameover.wav; sourceTree = "<group>"; };
-		84BE9B5C1DFBD9F500A230BF /* goSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goSound.mp3; path = ../../Documents/Archive/goSound.mp3; sourceTree = "<group>"; };
-		84BE9B611DFBDA3400A230BF /* Stage7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage7.swift; sourceTree = "<group>"; };
-		84BE9B631DFBE12E00A230BF /* Stage8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage8.swift; sourceTree = "<group>"; };
-		84BE9B651DFBE41700A230BF /* Stage9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage9.swift; sourceTree = "<group>"; };
-		84BE9B671DFBF29500A230BF /* Stage10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage10.swift; sourceTree = "<group>"; };
+		847DE0DC1DFBC6D30039D3DC /* breakrecord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = breakrecord.wav; sourceTree = "<group>"; };
+		847DE0DE1DFBC6DE0039D3DC /* goSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = goSound.mp3; sourceTree = "<group>"; };
 		84E9EF011DF85B6700705948 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		84E9EF051DF87A7900705948 /* fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fire.sks; sourceTree = "<group>"; };
 		F1325F621DF7FFB000184171 /* Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
@@ -85,7 +74,12 @@
 		F1C3A64B1DFB27CB00ABEA50 /* FrameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameController.swift; sourceTree = "<group>"; };
 		F1C3A64F1DFB72E400ABEA50 /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
 		F1C3A6551DFBB1E100ABEA50 /* Stage5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage5.swift; sourceTree = "<group>"; };
+		F1C3A6571DFBC64800ABEA50 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = "../../Downloads/Archive (1)/BackgroundMusic.mp3"; sourceTree = "<group>"; };
+		F1C3A6591DFBC65000ABEA50 /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameover.wav; path = "../../Downloads/Archive (1)/gameover.wav"; sourceTree = "<group>"; };
+		F1C3A65D1DFBC6B800ABEA50 /* goSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goSound.mp3; path = ../../Downloads/goSound.mp3; sourceTree = "<group>"; };
 		F1C3A6A81DFBD07500ABEA50 /* Stage6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage6.swift; sourceTree = "<group>"; };
+		F1C3A6AA1DFBD34600ABEA50 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundMusic.mp3; path = "../../Archive (1)/BackgroundMusic.mp3"; sourceTree = "<group>"; };
+		F1C3A6AC1DFBD35800ABEA50 /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameover.wav; path = "../../Archive (1)/gameover.wav"; sourceTree = "<group>"; };
 		F1D6868F1DFA45B000637BDE /* Stage4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,10 +113,6 @@
 				F1D6868F1DFA45B000637BDE /* Stage4.swift */,
 				F1C3A6551DFBB1E100ABEA50 /* Stage5.swift */,
 				F1C3A6A81DFBD07500ABEA50 /* Stage6.swift */,
-				84BE9B611DFBDA3400A230BF /* Stage7.swift */,
-				84BE9B631DFBE12E00A230BF /* Stage8.swift */,
-				84BE9B651DFBE41700A230BF /* Stage9.swift */,
-				84BE9B671DFBF29500A230BF /* Stage10.swift */,
 			);
 			name = Stage;
 			sourceTree = "<group>";
@@ -146,10 +136,10 @@
 		F18CDFAD1DF0877E00D24807 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				84BE9B591DFBD9F500A230BF /* BackgroundMusic.mp3 */,
-				84BE9B5A1DFBD9F500A230BF /* breakrecord.wav */,
-				84BE9B5B1DFBD9F500A230BF /* gameover.wav */,
-				84BE9B5C1DFBD9F500A230BF /* goSound.mp3 */,
+				F1C3A6AA1DFBD34600ABEA50 /* BackgroundMusic.mp3 */,
+				847DE0DC1DFBC6D30039D3DC /* breakrecord.wav */,
+				F1C3A6AC1DFBD35800ABEA50 /* gameover.wav */,
+				847DE0DE1DFBC6DE0039D3DC /* goSound.mp3 */,
 				845AEFC31DFB28D200A1BFBA /* Frame */,
 				F1325F611DF7FF9E00184171 /* Stage */,
 				F18CDFD01DF0893300D24807 /* Constants */,
@@ -188,7 +178,6 @@
 				F18CDFCE1DF088AE00D24807 /* EnemyController.swift */,
 				84E9EF011DF85B6700705948 /* PlayerController.swift */,
 				F1C3A64B1DFB27CB00ABEA50 /* FrameController.swift */,
-				F1C3A6AE1DFBD86400ABEA50 /* ShieldController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -260,15 +249,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE9B5F1DFBD9F500A230BF /* gameover.wav in Resources */,
+				F1C3A65A1DFBC65000ABEA50 /* gameover.wav in Resources */,
 				F18CDFBA1DF0877E00D24807 /* Main.storyboard in Resources */,
+				F1C3A6581DFBC64800ABEA50 /* BackgroundMusic.mp3 in Resources */,
 				F18CDFB11DF0877E00D24807 /* GameScene.sks in Resources */,
-				84BE9B5E1DFBD9F500A230BF /* breakrecord.wav in Resources */,
-				84BE9B5D1DFBD9F500A230BF /* BackgroundMusic.mp3 in Resources */,
 				F18CDFBC1DF0877E00D24807 /* Assets.xcassets in Resources */,
-				84BE9B601DFBD9F500A230BF /* goSound.mp3 in Resources */,
 				F18CDFBF1DF0877E00D24807 /* LaunchScreen.storyboard in Resources */,
+				F1C3A6AB1DFBD34600ABEA50 /* BackgroundMusic.mp3 in Resources */,
+				F1C3A65E1DFBC6B900ABEA50 /* goSound.mp3 in Resources */,
+				F1C3A6AD1DFBD35800ABEA50 /* gameover.wav in Resources */,
 				F1C3A6501DFB72E400ABEA50 /* explosion.sks in Resources */,
+				847DE0DF1DFBC6DE0039D3DC /* goSound.mp3 in Resources */,
 				F18CDFB31DF0877E00D24807 /* Actions.sks in Resources */,
 				84E9EF061DF87A7900705948 /* fire.sks in Resources */,
 			);
@@ -281,11 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE9B621DFBDA3400A230BF /* Stage7.swift in Sources */,
 				F18CDFB51DF0877E00D24807 /* GameScene.swift in Sources */,
-				84BE9B641DFBE12E00A230BF /* Stage8.swift in Sources */,
 				845AEFC21DFB276C00A1BFBA /* ScoreFrame.swift in Sources */,
-				84BE9B661DFBE41700A230BF /* Stage9.swift in Sources */,
 				F1D686901DFA45B000637BDE /* Stage4.swift in Sources */,
 				F18CDFB71DF0877E00D24807 /* GameViewController.swift in Sources */,
 				F1C3A6A91DFBD07500ABEA50 /* Stage6.swift in Sources */,
@@ -298,13 +286,11 @@
 				845AEFC51DFB2D2E00A1BFBA /* MainFrame.swift in Sources */,
 				F18CDFCD1DF0885C00D24807 /* Controller.swift in Sources */,
 				F1C3A64A1DFB19C200ABEA50 /* GameMenu.swift in Sources */,
-				F1C3A6AF1DFBD86400ABEA50 /* ShieldController.swift in Sources */,
 				F1B974871DF9A4DF00C1E9BC /* Stage3.swift in Sources */,
 				F18CDFCA1DF0880A00D24807 /* Views.swift in Sources */,
 				F148D1E31DFABCC000A5D8B9 /* GameOverScene.swift in Sources */,
 				F18CDFC71DF0879B00D24807 /* Utils.swift in Sources */,
 				F1325F631DF7FFB000184171 /* Frame.swift in Sources */,
-				84BE9B681DFBF29500A230BF /* Stage10.swift in Sources */,
 				F1B79ECE1DF8376C0065DFE7 /* Stage1.swift in Sources */,
 				F18CDFD21DF0894600D24807 /* Constants.swift in Sources */,
 			);

@@ -44,15 +44,38 @@ class FrameController {
             let frameNode = Stage6(size: CGSize(width: self.parent.frame.width, height: self.parent.frame.height/2))
             frameNode.config(position: CGPoint(x: self.parent.frame.width/2, y: self.parent.frame.height), parent: self.parent, speed: Speed.SM_SPEED)
     }
+        
+    let runStage7 = SKAction.run{
+            let frameNode = Stage7(size: CGSize(width: self.parent.frame.width, height: self.parent.frame.height/2))
+            frameNode.config(position: CGPoint(x: self.parent.frame.width/2, y: self.parent.frame.height), parent: self.parent, speed: Speed.SM_SPEED)
+        }
+        
+        let runStage8 = SKAction.run{
+            let frameNode = Stage8(size: CGSize(width: self.parent.frame.width, height: self.parent.frame.height/2))
+            frameNode.config(position: CGPoint(x: self.parent.frame.width/2, y: self.parent.frame.height), parent: self.parent, speed: Speed.SM_SPEED)
+        }
+        let runStage9 = SKAction.run{
+            let frameNode = Stage9(size: CGSize(width: self.parent.frame.width, height: self.parent.frame.height/2))
+            frameNode.config(position: CGPoint(x: self.parent.frame.width/2, y: self.parent.frame.height), parent: self.parent, speed: 20)
+        }
+        
+        let runStage10 = SKAction.run{
+            let frameNode = Stage10(size: CGSize(width: self.parent.frame.width, height: self.parent.frame.height/2))
+            frameNode.config(position: CGPoint(x: self.parent.frame.width/2, y: self.parent.frame.height), parent: self.parent, speed: 100)
+        }
+        
+        
+
         var stageArr = [SKAction]()
-        stageArr=[runStage1,runStage2,runStage3,runStage4,runStage5,runStage6]
+        stageArr=[runStage1,runStage2,runStage3,runStage4,runStage5,runStage6, runStage7, runStage8, runStage9, runStage10]
+//        stageArr = [runStage10]
         return stageArr
     }
     
     func runRandomStage(){
         let stageArr = addArrayofStage()
         let spawnFrame = SKAction.run {
-            let random = Int(arc4random_uniform(6))
+            let random = Int(arc4random_uniform(10))
             self.parent.run(stageArr[random])
         }
         self.parent.run(.repeatForever(.sequence([spawnFrame,.wait(forDuration: TIME_DURATION )])))
